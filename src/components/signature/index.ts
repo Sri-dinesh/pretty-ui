@@ -31,3 +31,15 @@ export { default as BentoGridItem } from "./BentoGridItem";
 export { default as ScrollProgressIndicator } from "./ScrollProgressIndicator";
 export { default as FileDropZone } from "./FileDropZone";
 export { default as DarkModeToggle } from "./DarkModeToggle";
+
+// Phase 3: Next-Level Components
+export { default as PixelRevealCard } from "./PixelRevealCard";
+export { default as NeonGlowBorder } from "./NeonGlowBorder";
+export { default as TypewriterText } from "./TypewriterText";
+export { default as PricingCard } from "./PricingCard";
+export { default as CircularProgressRing } from "./CircularProgressRing";
+export { default as SwipeableCardStack } from "./SwipeableCardStack";
+export { default as InteractiveRatingStars } from "./InteractiveRatingStars";
+export { default as GradientTextReveal } from "./GradientTextReveal";
+export { default as NotificationBell } from "./NotificationBell";
+export { default as CursorTrailEffect } from "./CursorTrailEffect";

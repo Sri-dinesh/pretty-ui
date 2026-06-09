@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✨ Pretty UI
 
-## Getting Started
+A premium collection of never-seen-before UI components. Future-minimalist design meets cutting-edge interactions.
 
-First, run the development server:
+Pretty UI is a meticulously crafted component library built on top of Next.js, Framer Motion, and Tailwind CSS. It features **31 high-performance, fully animated signature components** ready to drop into your projects.
+
+## 🚀 Features
+
+- **31 Signature Components**: Including Aurora Navbars, Magnetic Cards, Liquid Toggles, Glassmorphism Modals, and more.
+- **60fps Motion**: GPU-accelerated micro-interactions powered by Framer Motion for buttery-smooth animations.
+- **Modern Tech Stack**: Built with Next.js 15, React 19, TypeScript, and Tailwind CSS v4.
+- **Dark Mode Ready**: Fully supports both light and dark modes out-of-the-box via a custom `ThemeProvider`.
+- **Modular Architecture**: Each component in `src/components/signature/` is fully self-contained.
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Installation
+
+First, install the dependencies. The project relies on `framer-motion`, `lucide-react`, and `@fontsource` packages.
+
+```bash
+npm install
+```
+
+### 2. Development Server
+
+Start the local development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at [http://localhost:3001](http://localhost:3001). 
+*(Note: The server port has been explicitly configured to 3001 to avoid conflicts.)*
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧩 The Components
 
-## Learn More
+You can explore all the components live on the landing page (`src/app/page.tsx`). The source code for each component is available in the `src/components/signature/` directory.
 
-To learn more about Next.js, take a look at the following resources:
+### Phase 1: Foundation
+- Aurora Navbar
+- Magnetic Card
+- Morphing Search
+- Liquid Toggle
+- Pulse Data Badge
+- Ripple Button
+- Parallax Scroll Card
+- Glow Input
+- Elastic Slider
+- Orbit Menu
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Phase 2: Advanced
+- Morphing CTA Button
+- Spotlight Card
+- Holographic Profile Card
+- Infinite Marquee
+- Stepper Timeline
+- Glassmorphism Modal
+- Segmented Control
+- Skeleton Loader
+- OTP Input
+- Floating Label Input
+- Drag To Confirm
+- Command Palette
+- Avatar Stacked Group
+- Toast Notification Stack
+- Accordion FAQ
+- Animated Number Counter
+- Bento Grid Item
+- Scroll Progress Indicator
+- File Drop Zone
+- Dark Mode Toggle
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🎨 Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All styling is driven by CSS custom properties. You can globally customize the theme by tweaking the variables in `src/app/globals.css`. Every component will automatically inherit these updates to maintain a cohesive design system!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Tech Stack
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Fonts**: Inter & Space Grotesk (via Fontsource)
