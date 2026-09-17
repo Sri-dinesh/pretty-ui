@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, ArrowRight, Github, Layers, Zap, Palette, Search, User, Bell, FileText, Settings, Star, Mail, Image, File } from "lucide-react";
+import { Sparkles, ArrowRight, Github, Layers, Zap, Palette, Search, User, Bell, FileText, Settings, Star, Mail, Image, File, Code, Cpu, BarChart3, Globe } from "lucide-react";
 import ComponentShowcase from "@/components/ComponentShowcase";
 import {
   AuroraNavbar,
@@ -34,6 +34,17 @@ import {
   ScrollProgressIndicator,
   FileDropZone,
   DarkModeToggle,
+  // Phase 3
+  PixelRevealCard,
+  NeonGlowBorder,
+  TypewriterText,
+  PricingCard,
+  CircularProgressRing,
+  SwipeableCardStack,
+  InteractiveRatingStars,
+  GradientTextReveal,
+  NotificationBell,
+  CursorTrailEffect,
 } from "@/components/signature";
 
 const fadeInUp = {
@@ -78,7 +89,7 @@ export default function HomePage() {
             <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-[var(--bg-card)] mb-8">
               <Sparkles size={14} className="text-[var(--accent)]" />
               <span className="text-xs font-medium text-[var(--text-secondary)]">
-                30 Signature Components — Phase 1 &amp; 2
+                40 Signature Components — Phases 1, 2 &amp; 3
               </span>
             </motion.div>
 
@@ -136,7 +147,7 @@ export default function HomePage() {
               className="mt-16 grid grid-cols-3 gap-8 max-w-md mx-auto"
             >
               {[
-                { value: "30", label: "Components" },
+                { value: "40", label: "Components" },
                 { value: "60fps", label: "Animations" },
                 { value: "A11y", label: "Accessible" },
               ].map((stat) => (
@@ -622,6 +633,196 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ============== PHASE 3 COMPONENT GALLERY ============== */}
+      <section id="phase3" className="max-w-6xl mx-auto px-6 py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[var(--accent-subtle)] text-[var(--accent)] mb-4">
+            Phase 3 — Next-Level Collection
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+            10 New Signature Components
+          </h2>
+          <p className="mt-3 text-[var(--text-secondary)] max-w-lg mx-auto">
+            Pixel reveals, neon borders, typewriters, swipeable stacks — the most
+            expressive components yet.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          {/* 1 — Typewriter Text */}
+          <ComponentShowcase
+            title="Typewriter Text"
+            description="Multi-string typewriter with realistic typing rhythm, delete animation, and cursor blink."
+            span="2"
+          >
+            <div className="flex flex-col gap-2 py-4">
+              <TypewriterText
+                className="text-2xl md:text-3xl"
+                prefix="We build "
+                strings={["beautiful interfaces.", "stunning animations.", "premium components.", "pixel-perfect UI."]}
+              />
+              <TypewriterText
+                className="text-lg"
+                prefix="Powered by "
+                strings={["Framer Motion.", "React & TypeScript.", "CSS Variables.", "obsessive detail."]}
+                typingSpeed={80}
+              />
+            </div>
+          </ComponentShowcase>
+
+          {/* 2 — Interactive Rating Stars */}
+          <ComponentShowcase
+            title="Interactive Rating Stars"
+            description="Animated star rating with emoji sentiment morphing and particle burst on click."
+          >
+            <InteractiveRatingStars defaultValue={0} />
+          </ComponentShowcase>
+
+          {/* 3 — Pixel Reveal Card */}
+          <ComponentShowcase
+            title="Pixel Reveal Card"
+            description="Mosaic pixel-grid dissolves to reveal content on hover using canvas animation."
+            span="2"
+          >
+            <div className="grid grid-cols-2 gap-4">
+              <PixelRevealCard
+                title="Hover Me"
+                description="Watch the pixel mosaic dissolve to reveal the content beneath."
+                gradient="linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #ec4899 100%)"
+              />
+              <PixelRevealCard
+                title="Neon Reveal"
+                description="Each pixel fades in a randomized sequence for a unique feel."
+                gradient="linear-gradient(135deg, #06b6d4 0%, #10b981 100%)"
+              />
+            </div>
+          </ComponentShowcase>
+
+          {/* 4 — Circular Progress Ring */}
+          <ComponentShowcase
+            title="Circular Progress Ring"
+            description="SVG gradient stroke progress ring with spring animation triggered on scroll."
+          >
+            <div className="flex flex-wrap items-center justify-center gap-8">
+              <CircularProgressRing value={87} size={120} label="CPU" sublabel="Usage" gradientColors={["#7c3aed", "#ec4899"]} />
+              <CircularProgressRing value={63} size={120} label="RAM" sublabel="Memory" gradientColors={["#06b6d4", "#10b981"]} />
+              <CircularProgressRing value={42} size={120} label="DSK" sublabel="Storage" gradientColors={["#f59e0b", "#ef4444"]} />
+            </div>
+          </ComponentShowcase>
+
+          {/* 5 — Neon Glow Border */}
+          <ComponentShowcase
+            title="Neon Glow Border"
+            description="Sweeping conic-gradient neon border cycling through rainbow colors continuously."
+            span="2"
+          >
+            <div className="flex flex-wrap items-center justify-center gap-6">
+              <NeonGlowBorder borderRadius="20px" speed={4}>
+                <div className="flex flex-col gap-1 min-w-[160px]">
+                  <div className="flex items-center gap-2">
+                    <Zap size={16} className="text-[var(--accent)]" />
+                    <span className="text-sm font-semibold">Lightning Fast</span>
+                  </div>
+                  <p className="text-xs text-[var(--text-secondary)]">60fps animations everywhere.</p>
+                </div>
+              </NeonGlowBorder>
+              <NeonGlowBorder borderRadius="20px" colors={["#06b6d4","#10b981","#a855f7","#06b6d4"]} speed={6}>
+                <div className="flex flex-col gap-1 min-w-[160px]">
+                  <div className="flex items-center gap-2">
+                    <Globe size={16} className="text-[var(--accent)]" />
+                    <span className="text-sm font-semibold">Any Content</span>
+                  </div>
+                  <p className="text-xs text-[var(--text-secondary)]">Wrap any element with neon.</p>
+                </div>
+              </NeonGlowBorder>
+            </div>
+          </ComponentShowcase>
+
+          {/* 6 — Swipeable Card Stack */}
+          <ComponentShowcase
+            title="Swipeable Card Stack"
+            description="Tinder-style draggable card stack with spring physics, like/pass overlays, and button controls."
+            span="2"
+          >
+            <SwipeableCardStack />
+          </ComponentShowcase>
+
+          {/* 7 — Notification Bell */}
+          <ComponentShowcase
+            title="Notification Bell"
+            description="Animated bell with jiggle physics, badge counter, and staggered dropdown notification panel."
+          >
+            <div className="flex flex-col items-center gap-6">
+              <NotificationBell />
+              <p className="text-xs text-[var(--text-tertiary)] text-center">Click the bell to open the panel</p>
+            </div>
+          </ComponentShowcase>
+
+          {/* 8 — Gradient Text Reveal */}
+          <ComponentShowcase
+            title="Gradient Text Reveal"
+            description="Scroll-triggered clip-path text reveal with cinematic gradient sweep and word stagger mode."
+            span="full"
+          >
+            <div className="flex flex-col gap-6 py-4 text-center">
+              <GradientTextReveal
+                as="h3"
+                className="text-3xl md:text-4xl font-bold"
+                delay={0.1}
+              >
+                Crafted with obsessive attention to detail.
+              </GradientTextReveal>
+              <GradientTextReveal
+                as="h3"
+                className="text-2xl md:text-3xl font-bold"
+                gradient="linear-gradient(90deg, #06b6d4 0%, #10b981 40%, #a855f7 100%)"
+                delay={0.3}
+                stagger
+              >
+                Every pixel. Every transition. Every interaction.
+              </GradientTextReveal>
+            </div>
+          </ComponentShowcase>
+
+          {/* 9 — Cursor Trail Effect */}
+          <ComponentShowcase
+            title="Cursor Trail Effect"
+            description="Particle trail that follows the cursor inside the container with smooth decay animation."
+            span="2"
+          >
+            <CursorTrailEffect
+              className="w-full rounded-xl h-48"
+              style={{ background: "var(--bg-secondary)" }}
+              dotCount={20}
+              dotSize={10}
+              delay={35}
+            >
+              <div className="flex items-center justify-center h-full">
+                <p className="text-sm text-[var(--text-secondary)] pointer-events-none select-none">
+                  ✨ Move your cursor in here to see the trail effect
+                </p>
+              </div>
+            </CursorTrailEffect>
+          </ComponentShowcase>
+
+          {/* 10 — Pricing Card */}
+          <ComponentShowcase
+            title="Pricing Card"
+            description="Full pricing table with monthly/annual billing toggle, popular badge, feature checklist, and hover lift."
+            span="full"
+          >
+            <PricingCard />
+          </ComponentShowcase>
+
+        </div>
+      </section>
+
       {/* ============== FOOTER ============== */}
       <footer className="border-t border-border bg-[var(--bg-secondary)]">
         <div className="max-w-6xl mx-auto px-6 py-12">
@@ -631,8 +832,8 @@ export default function HomePage() {
               Pretty UI
             </div>
             <p className="text-xs text-[var(--text-tertiary)]">
-              Crafted with obsessive attention to detail. Phase 1 &amp; 2 — Signature
-              Collection.
+              Crafted with obsessive attention to detail. Phases 1, 2 &amp; 3 — Signature
+              Collection. 40 components total.
             </p>
             <div className="flex items-center gap-4">
               <a
